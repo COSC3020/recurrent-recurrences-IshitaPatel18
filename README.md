@@ -32,7 +32,7 @@ $T(n) = T(n/13^{log_{13}(n)}) + 5log_{13}(n)$ <br>
 $T(n) = T(1) + 5log_{13}(n)$ <br>
 $T(n) = 1 + 5log_{13}(n)$ <br>
 Since the constants aren't important asymptotically, as they won't impact the runtime tremendously like log(n) will <br>
-So the $/Theta$ bound is $/Theta(log(n))$
+So the $\Theta$ bound is $\Theta(log(n))$
 
 2.
 $$ T(n) =
