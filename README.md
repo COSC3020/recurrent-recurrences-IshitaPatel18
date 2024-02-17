@@ -28,9 +28,9 @@ The pattern seems to be: <br>
 $T(n) = T(n/13^i) + 5 * i$ <br> 
 To achieve the base case of 1, i needs to equal $log_13(n)$ <br>
 Now we have: <br>
-$T(n) = T(n/13^{log_13(n)}) + 5log_13(n)$ <br>
-$T(n) = T(1) + 5log_13(n)$ <br>
-$T(n) = 1 + 5log_13(n)$ <br>
+$T(n) = T(n/13^{log_{13}(n)}) + 5log_{13}(n)$ <br>
+$T(n) = T(1) + 5log_{13}(n)$ <br>
+$T(n) = 1 + 5log_{13}(n)$ <br>
 Since the constants aren't important asymptotically, as they won't impact the runtime tremendously like log(n) will <br>
 So the $/Theta$ bound is $/Theta(log(n))$
 
