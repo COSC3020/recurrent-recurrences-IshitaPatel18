@@ -61,7 +61,7 @@ To achieve the base case of 1, i needs to be equal to $log_{13}(n)$ <br>
 
 Now we have:  <br>
 $T(n) = 13^{log_{13}(n)} * T(n/13^{log_{13}(n)})$ + $$\left( \sum_{j=0}^{log_{13}(n) - 1} 13^j * 5 \right)$$ <br>
-The sum can be reduced down to n using the geometric series sum formula, and by dropping the constants as needed. For the formula, $a_1 = 5$ because $13^0 * 5$ is 5, the common ratio r is 13, and n is the upper bound $log_{13}(n)$. Now the geometric formula is Sum = $\frac{a_1(1-r^n)}{1-r}$ which, after substitution equals $\frac{5(1-13^{log_{13}(n) -1})}{1-13}$. 
+The sum can be reduced down to n using the geometric series sum formula, and by dropping the constants as needed. For the formula, $a_1 = 5$ because $13^0 * 5$ is 5, the common ratio r is 13, and n is the upper bound $log_{13}(n)$ - 1. Now the geometric formula is Sum = $\frac{a_1(1-r^n)}{1-r}$ which, after substitution equals $\frac{5(1-13^{log_{13}(n) -1})}{1-13}$. 
 The steps that follow: <br>
 = $\frac{5(1- (n * 13^{-1}))}{-12}$ <br>
 = $\frac{5(1- n/13)}{-12}$ <br>
