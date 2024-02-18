@@ -63,12 +63,12 @@ Now we have:  <br>
 $T(n) = 13^{log_{13}(n)} * T(n/13^{log_{13}(n)})$ + $$\left( \sum_{j=0}^{log_{13}(n) - 1} 13^j * 5 \right)$$ <br>
 The sum can be reduced down to n using the geometric series sum formula, and by dropping the constants as needed. For the formula, $a_1 = 5$ because $13^0 * 5$ is 5, the common ratio r is 13, and n is the upper bound $log_{13}(n)$. Now the geometric formula is Sum = $\frac{a_1(1-r^n)}{1-r}$ which, after substitution equals $\frac{5(1-13^{log_{13}(n) -1})}{1-13}$. 
 The steps that follow: <br>
-= $\frac{5(1- (n * 13^{-1}})}{-12}$ <br>
+= $\frac{5(1- (n * 13^{-1}))}{-12}$ <br>
 = $\frac{5(1- n/13)}{-12}$ <br>
 = $\frac{-5(n/13 - 13/13)}{-12}$ <br>
 = $\frac{5((n-13)/13)}{12}$ (the negatives were cancelled out) <br>
 = $\frac{5(n-13)}{156}$ <br>
-At this point I'm going to drop the constant, for the lack of importance, and for easier calcualtions <br>
+At this point I'm going to drop the constant 5, for the lack of importance, and for easier calcualtions <br>
 = (n/156) - (13/156) <br>
 = (n/156) - (1/12) <br>
 At this point 1/156 and -1/12 are constants that won't impact n asymptotically so they will also be dropped from the rest of my calculations <br>
