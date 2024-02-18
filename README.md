@@ -87,3 +87,28 @@ $$ T(n) =
         13 T\left(\frac{n}{13}\right) + 2n & n > 1
     \end{cases}
 $$
+
+My answer:
+
+Solve for T(n/13) and sub it back in: <br>
+T(n) = 13T(n/13) + 2n <br>
+T(n/13) = 13T(n/169) + 2n/13 <br>
+T(n) = 13(13T(n/169) + 2n/13) + 2n <br>
+T(n) = 169T(n/169) + 4n (4n = (2n/13 * 13) + 2n) <br>
+
+Now solve for T(n/169) (to establish the pattern) and sub back in: <br>
+T(n/169) = 13T(n/2197) + 2n/169 <br>
+T(n) = 169(13T(n/2197) + 2n/169) + 4n <br>
+T(n) = 2197T(n/2197) + 6n <br>
+
+The pattern seems to be:
+$T(n) = 13^i * T(n/13^i) + 2n * i$ <br>
+To reach the base case of 1, i needs to be $log_{13}(n)$ <br>
+
+Now we have: <br>
+$T(n) = 13^{log_{13}(n)} * T(n/13{log_{13}(n)}) + 2n * log_{13}(n) <br>
+$T(n) = n * T(1) + 2n * log_{13}(n) <br>
+T(n) = n + $2nlog_{13}(n)$ <br>
+And dropping the constants and the lower order term n, we have: <br>
+T(n) = nlog(n) <br>
+Therefore, our $\Theta$ bound is $\Theta(nlog(n))$ <br>
