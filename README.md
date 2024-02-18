@@ -101,13 +101,13 @@ T(n/169) = 13T(n/2197) + 2n/169 <br>
 T(n) = 169(13T(n/2197) + 2n/169) + 4n <br>
 T(n) = 2197T(n/2197) + 6n <br>
 
-The pattern seems to be:
+The pattern seems to be: <br>
 $T(n) = 13^i * T(n/13^i) + 2n * i$ <br>
 To reach the base case of 1, i needs to be $log_{13}(n)$ <br>
 
 Now we have: <br>
-$T(n) = 13^{log_{13}(n)} * T(n/13{log_{13}(n)}) + 2n * log_{13}(n) <br>
-$T(n) = n * T(1) + 2n * log_{13}(n) <br>
+$T(n) = 13^{log_{13}(n)} * T(n/13{log_{13}(n)}) + 2n * log_{13}(n)$ <br>
+$T(n) = n * T(1) + 2n * log_{13}(n)$ <br>
 T(n) = n + $2nlog_{13}(n)$ <br>
 And dropping the constants and the lower order term n, we have: <br>
 T(n) = nlog(n) <br>
